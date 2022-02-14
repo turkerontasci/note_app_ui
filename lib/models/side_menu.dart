@@ -15,7 +15,7 @@ class SideMenu extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
-          color: Colors.blueGrey.shade100,
+          color: const Color(0xFFffffff).withOpacity(0.3),
         ),
         height: double.infinity,
         width: 10,

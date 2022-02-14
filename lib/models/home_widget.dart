@@ -26,7 +26,7 @@ class HomeWidget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey.shade100,
+                  color: const Color(0xFFffffff).withOpacity(0.3),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: Column(
@@ -63,6 +63,14 @@ class HomeWidget extends StatelessWidget {
                               ),
                             ],
                           ),
+                          const Text(
+                            "Notes",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
@@ -95,8 +103,29 @@ class HomeWidget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey.shade100,
+                  color: const Color(0xFFffffff).withOpacity(0.3),
                   borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const <Widget>[
+                          Text(
+                            "To-Do List",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

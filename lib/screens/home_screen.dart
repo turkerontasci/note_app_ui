@@ -17,32 +17,56 @@ class _HomeScreenState extends State<HomeScreen> {
     Size _size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: kSecondaryColor,
+        backgroundColor: Colors.transparent,
         body: Responsive(
-          mobile: const HomeWidget(),
-          tablet: Row(
-            children: const <Widget>[
-              Expanded(
-                flex: 4,
-                child: SideMenu(),
-              ),
-              Expanded(
-                flex: 9,
-                child: HomeWidget(),
-              ),
-            ],
+          mobile: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.purple, Colors.deepPurpleAccent]),
+            ),
+            child: const HomeWidget(),
           ),
-          desktop: Row(
-            children: const <Widget>[
-              Expanded(
-                flex: 2,
-                child: SideMenu(),
-              ),
-              Expanded(
-                flex: 9,
-                child: HomeWidget(),
-              ),
-            ],
+          tablet: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.purple, Colors.orange]),
+            ),
+            child: Row(
+              children: const <Widget>[
+                Expanded(
+                  flex: 4,
+                  child: SideMenu(),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: HomeWidget(),
+                ),
+              ],
+            ),
+          ),
+          desktop: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.purple, Colors.orange]),
+            ),
+            child: Row(
+              children: const <Widget>[
+                Expanded(
+                  flex: 2,
+                  child: SideMenu(),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: HomeWidget(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
