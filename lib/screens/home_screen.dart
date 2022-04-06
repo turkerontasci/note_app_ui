@@ -24,7 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Colors.purple, Colors.deepPurpleAccent]),
+                  colors: [
+                    Colors.black,
+                    Colors.pink,
+                  ]),
             ),
             child: const HomeWidget(),
           ),
@@ -33,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Colors.purple, Colors.orange]),
+                  colors: [Colors.black, Colors.pink]),
             ),
             child: Row(
               children: const <Widget>[
@@ -53,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Colors.purple, Colors.orange]),
+                  colors: [Colors.black, Colors.pink]),
             ),
             child: Row(
               children: const <Widget>[

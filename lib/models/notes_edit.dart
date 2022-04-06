@@ -110,7 +110,7 @@ class NoteEntry extends StatelessWidget {
         drawerScrimColor: Colors.black,
         appBar: AppBar(
           toolbarHeight: 40.0,
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.grey,
           title: const Text("Note Edit"),
         ),
         floatingActionButton: FloatingActionButton(
@@ -141,9 +141,9 @@ class NoteEntry extends StatelessWidget {
           ),
           tablet: Row(
             children: <Widget>[
-              const Expanded(
+              Expanded(
                 flex: 4,
-                child: NoteSideMenu(),
+                child: Container(),
               ),
               Expanded(
                 flex: 9,
@@ -170,9 +170,9 @@ class NoteEntry extends StatelessWidget {
           ),
           desktop: Row(
             children: <Widget>[
-              const Expanded(
+              Expanded(
                 flex: 2,
-                child: NoteSideMenu(),
+                child: Container(),
               ),
               Expanded(
                 flex: 9,

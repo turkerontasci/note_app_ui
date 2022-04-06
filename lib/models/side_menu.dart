@@ -25,10 +25,9 @@ class SideMenu extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: [
-                    const Spacer(),
+                  children: const [
+                    Spacer(),
                     // We don't want to show this close button on Desktop mood
-                    if (!Responsive.isDesktop(context)) CloseButton(),
                   ],
                 ),
                 const SizedBox(height: 20),
