@@ -1,9 +1,8 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants.dart';
-import 'package:flutter_application_2/responsive.dart';
+
+import '../models/notes_edit.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
@@ -39,8 +38,13 @@ class SideMenu extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  color: kPrimaryColor,
-                  onPressed: () {},
+                  color: Colors.blue,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NotesEdit()),
+                    );
+                  },
                   icon: const Icon(
                     CupertinoIcons.add,
                     size: 16,
@@ -52,23 +56,6 @@ class SideMenu extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: kDefaultPadding),
-                FlatButton.icon(
-                  minWidth: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: kDefaultPadding,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: kBgDarkColor,
-                  onPressed: () {},
-                  icon: const Icon(Icons.download, size: 16),
-                  label: const Text(
-                    "Get notes",
-                    style: TextStyle(color: kTextColor),
-                  ),
-                ),
-                const SizedBox(height: kDefaultPadding * 2),
               ],
             ),
           ),

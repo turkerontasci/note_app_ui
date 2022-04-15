@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/models/note_side_menu.dart';
 import 'package:flutter_application_2/responsive.dart';
-
-import '../models/note.dart';
-import '../models/notes_database.dart';
-import '../themes/note_colors.dart';
 
 const c1 = 0xFFFDFFFC,
     c2 = 0xFFFF595E,

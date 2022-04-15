@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/constants.dart';
 import 'package:flutter_application_2/models/home_widget.dart';
-import 'package:flutter_application_2/models/side_menu.dart';
+import 'package:flutter_application_2/components/side_menu.dart';
 import 'package:flutter_application_2/responsive.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,29 +13,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Responsive(
           mobile: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Colors.black,
-                    Colors.pink,
-                  ]),
+              color: Colors.blueGrey,
             ),
             child: const HomeWidget(),
           ),
           tablet: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [Colors.black, Colors.pink]),
+              color: Colors.blueGrey,
             ),
             child: Row(
               children: const <Widget>[
@@ -53,10 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           desktop: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [Colors.black, Colors.pink]),
+              color: Colors.blueGrey,
             ),
             child: Row(
               children: const <Widget>[
