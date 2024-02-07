@@ -32,15 +32,7 @@ class NoteSideMenu extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                FlatButton.icon(
-                  minWidth: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 20,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: kPrimaryColor,
+                TextButton.icon(
                   onPressed: () {},
                   icon: const Icon(
                     CupertinoIcons.add,
@@ -53,15 +45,7 @@ class NoteSideMenu extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: kDefaultPadding),
-                FlatButton.icon(
-                  minWidth: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: kDefaultPadding,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: kBgDarkColor,
+                TextButton.icon(
                   onPressed: () {},
                   icon: const Icon(Icons.download, size: 16),
                   label: const Text(

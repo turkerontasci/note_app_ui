@@ -30,15 +30,7 @@ class SideMenu extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                FlatButton.icon(
-                  minWidth: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 20,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: Colors.blue,
+                TextButton.icon(
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -52,7 +44,9 @@ class SideMenu extends StatelessWidget {
                   ),
                   label: const Text(
                     "New note",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 const SizedBox(height: kDefaultPadding),
